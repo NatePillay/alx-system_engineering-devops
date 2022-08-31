@@ -1,2 +1,2 @@
 #!/bin/bash
-cpv -rua *.html
+cp -rua *.html
