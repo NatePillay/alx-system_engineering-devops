@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 
+chown VINCENT:STAFF _hello 
