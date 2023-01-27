@@ -6,7 +6,7 @@ while [ $outer -le 12 ]; do
 	inner=1
 	while [ $inner -le 59 ]; do
 		echo "$inner"
-		inner=$((inner+1))
+		(( inner++ ))
 	done
-	outer=$((outer+1))
+	(( outer++ ))
 done
