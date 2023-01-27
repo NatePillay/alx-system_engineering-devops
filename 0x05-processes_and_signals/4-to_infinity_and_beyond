@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#write a program that runs indefinitely and returns a value + sleep 2 seconds
+while True; do
+	echo "To infinity and beyond"
+	sleep 2
+done
