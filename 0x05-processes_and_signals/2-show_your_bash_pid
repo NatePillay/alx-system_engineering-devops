@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Lists all processes for all users, including those without a TTY
-# Displays in user-oriented format
-# Show process hierachy
-ps auxf
+# shellcheck disable=SC2009
+ps auxf | grep "bash"
