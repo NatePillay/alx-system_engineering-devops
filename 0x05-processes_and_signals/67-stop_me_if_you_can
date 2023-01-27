@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script to kill a process with limitation
+pkill -f 7-highlander
