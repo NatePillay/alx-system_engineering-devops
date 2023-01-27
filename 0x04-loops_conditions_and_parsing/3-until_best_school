@@ -4,5 +4,5 @@ count=0
 until [ $count == 10 ];
 do
 	echo "Best School"
-	((x++))
+	((count++))
 done
