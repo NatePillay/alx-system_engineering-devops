@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#nested while look
+outer=0
+while [ $outer -le 12 ]; do
+	echo "Hour: $outer"
+	inner=1
+	while [ $inner -le 59 ]; do
+		echo $inner
+		inner=$((inner+1))
+	done
+	outer=$((outer+1))
+done
