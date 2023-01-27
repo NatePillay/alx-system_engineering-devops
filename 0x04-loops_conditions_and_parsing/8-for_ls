@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #list all files and showing name after first dash only, 1 file per line
 for file in *; do
-    echo "$file" | cut -c 3-
+    echo "$file" | cut -d '-' -f2
 done
