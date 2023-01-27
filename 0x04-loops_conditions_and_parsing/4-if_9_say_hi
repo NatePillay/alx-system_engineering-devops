@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#this is a while and if statement
 bash script is displaying "Best School" 10 times
 i=1
 while [ $i -lt 11 ];
