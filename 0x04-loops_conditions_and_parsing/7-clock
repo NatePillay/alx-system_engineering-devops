@@ -4,7 +4,7 @@ outer=0
 while [ $outer -le 12 ]; do
 	echo "Hour: $outer"
 	inner=1
-	while [ $inner -le 59 ]; do
+	while [ $inner -le 59 ] do
 		echo "$inner"
 		(( inner++ ))
 	done
