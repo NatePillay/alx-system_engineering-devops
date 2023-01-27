@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#using a while loop in bash scripting
+count=10
+while [ $count -gt 0 ]; 
+do
+	echo "Best School"
+	count=$((count-1))
+done
