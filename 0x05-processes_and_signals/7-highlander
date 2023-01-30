@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #performing magic tricks here
-while True: do
+while true: do
 	echo "To infinity and beyond"
 	sleep 2
 	trap 'echo "I am invincible!!!"' SIGTERM 
