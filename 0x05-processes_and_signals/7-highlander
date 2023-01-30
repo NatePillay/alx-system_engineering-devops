@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #performing magic tricks here
+#display error messages
 while true: do
 	echo "To infinity and beyond"
 	sleep 2
