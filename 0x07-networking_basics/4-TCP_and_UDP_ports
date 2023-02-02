@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# Get the list of all listening sockets
+listening_sockets=$(ss -lntu | awk 'NR>1 {print $4}')
+# Loop through each socket and get the PID and name of the program
+for socket in $listening_sockets; do
+  pid=$(lsof -i :$socket | awk 'NR>1 {print $2}')
+  name=$(ps -p $pid -o comm=)
+  echo "Socket: $socket PID: $pid Program: $name"
+done
