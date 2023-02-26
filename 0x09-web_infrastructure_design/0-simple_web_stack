@@ -1,14 +1,27 @@
 The Design of a one server web infastructure that hosts the website 
 www.foobar.com
 
-1 server:
+1 server: Using a single server to host the website, which will serve as both the web server and the application server
 
-1 web server (Nginx):
+1 web server (Nginx): - An NGINX web server is installed in the server for serving "static" web content (i.e hard-coded content that needs no changes when delivered to the user) over the protocol, HTTP.
 
-1 application server:
+1 application server: The application server will receieve dynamic request from Nginx nd generate dynamic content to return to the user
 
+For security and performance configuring the application server to listen on a Unix socket rather than a TCP port. Increased security and performance
 1 application files (your code base):
+- This application server's fundamental purpose is to process web server requests and generate dynamic content from a business logic and application database in the backend.
 
 1 database (MySQL):
+- The primary role of the database is to store application data.
 
-1 domain name:
+Domain name/DNS: THE DNS resolves the domain name to the server IP address which is 8.8.8.8.
+
+Problems with this infastructure:
+Single point filures:
+this is essentially a flaw in the design or imlementation of a system. With just one malfunction cal cause the whole sywstem to stop working.This depends on interdeoendencies implicated in the failure.
+- with no back up server to handle the load while rebooting the oriignal server this could lead to website down for maintenance and a bad impression for customers
+- Downtime for maintenance: without a back up we will have to shutdown the server for a period of time in order to restart and deploy the code for fixing the problems. Updating and resolving other issues can cause extended period of no use.
+- with only one server scalability is jeopardized. Scale is limited as the load is not rebalanced on the server and all traffic goes through one.
+
+
+
