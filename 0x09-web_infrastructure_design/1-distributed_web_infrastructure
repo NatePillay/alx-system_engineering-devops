@@ -1,0 +1,32 @@
+Structure of question 1
+
+2 servers
+1 web server (Nginx)
+1 application server
+1 load-balancer (HAproxy)
+1 set of application files (your code base)
+1 database (MySQL)
+
+The server's performance and capacity directly impact the performance and capacity of the other components in the web infrastructure. If the server is slow or has limited resources, it may struggle to handle a high volume of incoming requests or generate dynamic content quickly. This can lead to slow website loading times, increased latency, and a poor user experience.
+
+2 servers:
+If a website grows in traffic and content one server wont be enough to handle the load so adding more can be beneficial
+
+A load balancer can assist with distributing the load across multiple servers, each server can handle a portion of incoming requests
+
+If one server fails or experiences an issue, other servers can take over and continue to serve incoming requests, minimizing downtime and ensuring the website remains accessible to users.
+
+The load balancer algorithm would be Round Robin: This method passes eqch new connection request to the next server in line. Evenly distributing the load
+Active-active solutions deploy two or more active system instances and can be used to improve scalability as well as provide high availability - handling request concurrently
+
+Active-active solutions deploy two or more active system instances and can be used to improve scalability as well as provide high availability - handling request concurrently
+- master handles all writes and updates to the DB
+- replicas replicate the data from the primary server and handle all read-only requests (although there are delays in replication process) and in instance of primary sever failure replica will take over
+
+Overall, a primary-replica database cluster provides redundancy, high availability, and scalability
+
+SPOF: 
+THe load balancer is a SPOF. If it fails the loads will not be distributed leading to 1 server experiencing high traffice and could be fatal
+No firewall on the servers: No enryption  No asymmetric' Public Key Infrastructure (PKI) system in place and thus communication is open to hacking 
+
+Overall, the load-balancer and the Primary-Replica database cluster would provide redundancy and high availability, while the web server and application server would handle the processing of requests and delivery of content.
