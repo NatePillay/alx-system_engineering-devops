@@ -1,0 +1,10 @@
+QUESTION 3 (ADVANCED SECTION)
+
+
+- Adding an additional server:
+an additional server distributes the load more, increases the amount of traffic we can handle, reducing ineffectively time from having to do maintenance and worrying about straining our other servers. 
+
+- Adding another load balance configured with the other: Allowing us to ensure that if one fails the other will take over
+
+-Splitting components means we making oru system less likely of having to shutdown if our infastructrue is attacked as not all of the components will sit with only 1 server. We distibute the infastructure to protect it 
+ 
