@@ -1,0 +1,29 @@
+On a design of 3 server web infastructure that hosts website 
+www.foobar.com 
+it must be secured, serve encrypted traffic, and be monitored.
+
+What are firewalls for?
+Firewalls are used to protect the servers and the infastructure from unauthorized access and malicious traffic
+they contorl inflow/outflow of network traffic based on predefined security rules
+Acting as a guardian to allow or block packets of data
+
+Why is the traffic served over HTTPS?
+HTTPS is for secure and encrypted communication between the web server and the client. To protect all sensitive information
+
+What is monitoring used for?
+Data collection in regard to server (performance, resource utilization and errors)
+Find bottlenecks, assess performance and find avaliability to optimize
+The monitoring tool collects data from the servers through monitoring agents or clients that are installed on each server
+CPU usgae
+Memory usage
+network traffic
+- Monitoring is configured to
+    i. collect web server data
+    ii. triggers an alert if QPS (Query Per Second) is getting out of control
+
+
+Problems to overcome:
+- Terminating SSL at load balancer level leaves traffic between the load balancer and web servers unencrypted and exposed to attack
+-If the primary MySQL server fails, the entire application will become unavailable until the server is restored or a failover mechanism is implemented.
+-Having servers with all the same components (database, web server, and application server) can make the infrastructure vulnerable to common vulnerabilities that affect all the components. 
+-if there is a vulnerability in the web server software, all the servers running the software will be affected. It 
