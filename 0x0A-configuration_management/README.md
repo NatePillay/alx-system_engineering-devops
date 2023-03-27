@@ -1,1 +1,3 @@
 Using puppet
+
+nice techniques
