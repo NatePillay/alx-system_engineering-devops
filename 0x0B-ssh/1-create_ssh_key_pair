@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 key_name="school"
 key_bits=4096
 key_passphrase="betty"
