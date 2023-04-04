@@ -17,7 +17,7 @@ backend nodes
 	mode http
 	balance roundrobin
 	server 103446-web-01 100.26.53.67
-	server 103446-web-02 34.229.186.21" >> /etc/haproxy/haproxy.cfg
+	server 103446-web-02 100.24.244.107" >> /etc/haproxy/haproxy.cfg
 	
 
 sudo service haproxy restart
