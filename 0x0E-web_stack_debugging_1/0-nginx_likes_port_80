@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#script to see if container can list on port 80
 
 #installing Nginx if not already installed
 sudo apt-get update
