@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#installing Nginx if not already installed
+sudo apt-get update
+sudo apt-get install -y nginx
+
+#configure to list on port 80
+sudo sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-avaliable/default
+sudo systemctl restart nginx
+
+#change and allow traffic on port 80
+sudo ufw allow 80/tcp
+sudo ufw reload
+
+#display active IPv4 IPs
+echo "Active IPv4 IPs:"
+ip addr show | grep "inet " | awk '{print $2}'

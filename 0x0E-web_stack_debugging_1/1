@@ -1,0 +1,40 @@
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [56.4 kB]
+Get:2 http://security.ubuntu.com trusty-security InRelease [56.4 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty Release
+Get:3 http://archive.ubuntu.com trusty-updates/main amd64 Packages [2183 kB]
+Get:4 http://security.ubuntu.com trusty-security/main amd64 Packages [1557 kB]
+Get:5 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [28.7 kB]
+Get:6 http://security.ubuntu.com trusty-security/restricted amd64 Packages [24.6 kB]
+Get:7 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [931 kB]
+Get:8 http://security.ubuntu.com trusty-security/universe amd64 Packages [529 kB]
+Get:9 https://esm.ubuntu.com trusty-infra-security InRelease
+Get:10 https://esm.ubuntu.com trusty-infra-updates InRelease
+Get:11 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [6133 B]
+Get:12 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [21.7 kB]
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Get:13 https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Fetched 6127 kB in 17s (356 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+sed: can't read /etc/nginx/sites-avaliable/default: No such file or directory
+sudo: systemctl: command not found
+sudo: ufw: command not found
+sudo: ufw: command not found
+Active IPv4 IPs:
+127.0.0.1/8
+172.17.0.2/16
