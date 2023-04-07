@@ -9,7 +9,7 @@ sub = "$2"
 dig_cmd () {
 	#function vairables
 	sub="$2"
-	INFO="${dig "$sub/$domain" | grep -A1 'ANSWER SECTION:' | awk 'NR==2')"
+	INFO="${dig "$sub.$domain" | grep -A1 'ANSWER SECTION:' | awk 'NR==2')"
 	IP=$(echo "$INFO" | awk '{print $5}')
 	RECORD=$(echo "$INFO" | awk '{print $4}')
 
