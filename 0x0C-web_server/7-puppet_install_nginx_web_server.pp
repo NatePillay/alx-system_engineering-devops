@@ -1,4 +1,4 @@
-cript to install nginx using puppet
+#script to install nginx using puppet
 
 package {'nginx':
   ensure => 'present',
