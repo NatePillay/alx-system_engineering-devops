@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-username=$(whoami)
-echo "$username"
+sudo -u "$1" bash << EOF
+whoami
+EOF
