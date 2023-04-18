@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 #running nginx as nginx user and listening on port 8080
 sed -i 's/user www-data/user nginx/' /etc/nginx/nginx.conf
-sed -i "s/80/8080/g" /etc/nginx/sites-avaliable/default
+sudo sh -c "echo 'server {
+    listen 8080 default_server;
+    listen [::]:8080 default_server;
+    server_name _;
+    root /var/www/html;
+    index index.html;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}' > /etc/nginx/sites-available/default"
 chmod 644 /etc/nginx/nginx.conf
 pkill pache2
 sudo -u nginx service nginx start
