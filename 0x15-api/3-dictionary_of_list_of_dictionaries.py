@@ -2,11 +2,11 @@
 '''export data in json format'''
 from sys import argv
 from requests import get
-import csv
+import json
 
 if __name__ == '__main__':
 	endpoint = 'https://jsonplaceholder.typicode.com'
-	users= get(endpoint + '/user/').json()
+	users= get(endpoint + '/users/').json()
 	todos = get(endpoint + '/todos/').json()
 
 	i, records = 0, []
@@ -17,6 +17,7 @@ if __name__ == '__main__':
 			all[id] = records
 			i += 1
 			id, user = users[i]['id'], users[i]['username']
+			records = []
 		records.append({'username': user, 'task': todo['title'],
 				'completed': todo['completed']})
 
