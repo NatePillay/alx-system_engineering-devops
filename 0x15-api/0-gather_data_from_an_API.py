@@ -15,6 +15,6 @@ if __name__ == "__main__":
 	titles_comp = [todo['title'] for todo in todos if todo['completed']]
 
 	print('Employee {} is done with tasks {}/{}:'
-		.format(user_response['name'], len(titles_compl), len(todos)))
+		.format(user_response['name'], len(titles_comp), len(todos)))
 
 	[print('\t {}'.format(title)) for title in titles_comp]
