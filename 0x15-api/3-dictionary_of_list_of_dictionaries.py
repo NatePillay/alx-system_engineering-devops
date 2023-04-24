@@ -6,11 +6,11 @@ import csv
 
 if __name__ == '__main__':
 	endpoint = 'https://jsonplaceholder.typicode.com'
-	user = get(endpoint + '/user/').json()
+	users= get(endpoint + '/user/').json()
 	todos = get(endpoint + '/todos/').json()
 
 	i, records = 0, []
-	id, user, all = users[i[['id'], users[i]['username'], {}
+	id, user, all = users[i]['id'], users[i]['username'], {}
 
 	for todo in todos:
 		if todo['userId'] != id:
