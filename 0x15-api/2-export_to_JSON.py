@@ -6,14 +6,14 @@ import json
 
 if __name__ == '__main__':
 	endpoint = 'https://jsonplaceholder.typicode.com'
-	user = get(endpoint + '/users/' + argv[1]).json()['username']
+	usr = get(endpoint + '/users/' + argv[1]).json()['username']
 	todos = get(endpoint + '/todos?userId=' + argv[1]).json()
 
-	record, user_data, group = {}, {},[]
+	record, user_data, group = {}, {}, []
 	for todo in todos:
 		record['task'] = todo['title']
 		record['completed'] = todo['completed']
-		record['username'] = user
+		record['username'] = usr
 		group.append(record)
 		record = {}
 
