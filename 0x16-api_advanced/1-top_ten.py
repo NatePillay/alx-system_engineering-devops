@@ -1,17 +1,38 @@
 #!/usr/bin/python3
-
+''' module containing functions for working with the reddit api '''
 import requests
 
+url = 'https://www.reddit.com'
+'''Reddit's base API URL'''
+
+
 def top_ten(subreddit):
-    mclient = requests.sessions()
+    '''ret number of subscribers from a given subreddit'''
+    api_headers = {
+            'Accept': 'application/json',
+            'User-Agent': ''.join([
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+                'AppleWebKit/537.36 (KHTML, like Gecko)',
+                'Chrome/97.0.4692.71',
+                'Safari/537.36',
+                'Edg/97.0.1072.62'
+                ])
+    }
+    sort = 'top'
+    limit = 10
+    res = requests.get(
+            '{}/r/{}/.json?sort={}&limit={}'.format(
+                url,
+                subreddit,
+                sort,
+                limit
+    ),
+    headers=api_headers,
+    allow_redirects=False
+    )
 
-    mclient.headers['User-Agent'] = 'Custom User Agent for task 1'
-
-    url = "https://www.reddit.com/r/{:s}/hot.json".format(subreddit)
-    r = mclient.get(url, allow_redirects = False)
-    if r.status_code == 200:
-        list_hot_posts = r.json()["data"]["children"]
-        for item in list_hot_posts:
-            print(item['data']['title'])
-        else:
-            return None
+    if res.status_code == 200:
+        for post in res.json()['data']['children'][0:10]:
+                print(post['data']['title'])
+    else:
+        print(None)
