@@ -5,18 +5,20 @@ import requests
 
 def sort_histogram(histogram={}):
     """sorts and prints the given histogram"""
-    histogram = list(filter(lambda kvL kv[1], histogram))
+    histogram = list(filter(lambda kv: kv[1], histogram))
     histogram_dict = {}
     for item in histogram:
        if item[0] in histogram_dict:
             histogram_dict[item[0]] += item[1]
        else:
             histogram_dict[item[0]] = item[1]
+    
+    histogram = list(histogram_dict.items())
+    histogram.sort(key=lambda kv: (kv[1], kv[0]), reverse=True)
+    
+    res_str = '\n'.join(list(map(lambda kv: '{}: {}'.format(kv[0], kv[1]), histogram)))
 
-   histogram = list(histogram_dict.items()
-   histogram.sort(key=lambda kv: (kv[1], kv[0]), reverse=True)
-
-   if res_str:
+    if res_str:
         print(res_str)
 
 
