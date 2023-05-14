@@ -22,7 +22,7 @@ def recurse(subreddit, hot_list=[], n=0, after=None):
     limit = 30
 
     res = requests.get(
-            '{}/r/{}/about/.json?sort={}&limit={}&count={}&after={}'.format(
+            '{}/r/{}/.json?sort={}&limit={}&count={}&after={}'.format(
                 url, 
                 subreddit,
                 sort,
